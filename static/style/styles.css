@@ -1,0 +1,29 @@
+html {
+    width: 100% !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+.no-style {
+    text-decoration: inherit;
+}
+
+
+@media screen and (max-width:1400px){
+  
+}
+
+@media screen and (max-width: 992px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+@media screen and (max-width: 576px) {
+  
+
+}
