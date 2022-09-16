@@ -10,6 +10,60 @@ html {
     text-decoration: inherit;
 }
 
+#navBar {
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    height: 90%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+    #navBar a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    #navBar a.active {
+    background-color: #04AA6D;
+    color: white;
+    }
+
+    #navBar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+    }
+
+#main {
+    margin-left: 25%; /* Same as the width of the sidebar */
+    padding-left: 20px; /* top - left */
+    top: 10%;
+    height: 80%;
+}
+
+
+.log {
+    top: 0;
+    position: fixed;
+}
+
+button {
+    float: right;
+    margin: auto;
+}
+
+footer{
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    padding: 10px;
+    background-color: grey;
+}
 
 
 @media screen and (max-width: 768px) {
