@@ -97,6 +97,11 @@ html {
     background-color: #0099cc;
   }
   
+  .bottom{
+    bottom: 80px;
+    left: 40px;
+    padding: 10px;
+  }
 
   
   /* For mobile phones: */
@@ -136,6 +141,16 @@ html {
   }
 
 /* Images */
+
+.container{
+  display: flex;
+  overflow: hidden;
+}
+
+.item{
+  margin: 10px;
+  float: left;
+}
 
 div.relative {
     position: relative;
