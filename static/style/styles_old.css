@@ -82,13 +82,11 @@ html {
 
 .menu {
   position: fixed;
-  flex-wrap: wrap;
-  display: flex;
 }
 
 .main {
   float: right;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   display: flex;
   background-color: white;
 }
@@ -191,7 +189,7 @@ audio {
     bottom: 0;
     left: 0;
     width: 175px;
-    height: 100px;
+    height: 175px;
     display: none;
 }
 
