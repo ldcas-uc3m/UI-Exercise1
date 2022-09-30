@@ -8,47 +8,46 @@
   </head>
 
   <body>
-    <div class="flex-container">
+  <div layout>
+    <!-- Header -->
 
-      <!-- HEADER -->
-      <div class="row-1 col-12 header">
-          <div class="col-2">
-            <img id="logo" src="static/images/icons/logo.svg">
-          </div>
-          <div class="col-1">
-            <h1>Capify</h1>
-          </div>
-        
-          <div class="col-1 button">
-            <button class="button">Sign up</button>
-          </div>
-
-          <div class="col-1 button">
-            <button class="button">Log in</button>
-          </div>
+    <div class="row header">
+      <div class="col-1 col-s-3">
+        <img id="logo" src="static/images/icons/logo.svg">
       </div>
-
-      <!-- MENU -->
-      <div class="row-8 col-4">
-        <div class="col-3 menu">
-          <ul>
-            <li>Home</li>
-            <li>Search</li>
-            <li>About us</li>
-            <li>Liked songs</li>
-          </ul>
-        </div>
-        <div class="col-3 menu">
-          <ul>
-            <li>FAQ</li>
-            <li>Cookies policy</li>
-            <li>Privacy policy</li>
-          </ul>
-        </div>
+      <div class="col-1 col-s-3">
+        <h1>Capify</h1>
       </div>
+    
+      <div class="col-10 col-s-6 access">
+        <a class="button">Sign up</a>
+        <a class="button">Log in</a>
+      </div>
+    </div>
+    
+    <div id="menuBar" class="row center">
 
-      <!-- MAIN -->
-      <div class="row 4 col-12 main">
+      <!-- Navigation Bar -->
+
+      <div class="col-3 col-s-3 menu top">
+        <ul>
+          <li>Home</li>
+          <li>Search</li>
+          <li>About us</li>
+          <li>Liked songs</li>
+        </ul>
+      </div>
+      <div class="menu bottom col-3 col-s-3">
+        <ul>
+          <li>FAQ</li>
+          <li>Cookies policy</li>
+          <li>Privacy policy</li>
+        </ul>
+      </div>
+    
+      <!-- Main -->
+      <div class="col-9 col-s-9 main top">
+
         <!-- images -->
 
         <!--Container 1-->
@@ -191,12 +190,13 @@
         </div>
 
       </div>
-
+    
     </div>
+  </div>
   </body>
 
   <footer>
-    <h2>Join Now!</h2>
+    <h2>Join now</h2>
   </footer>
 
 </html>
