@@ -14,7 +14,6 @@ html {
 
 /* GRID */
 
-
 [class*="col-"] {
     float: left;
 }
@@ -32,7 +31,7 @@ html {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-/* .row-1 {height: 8.33%;}
+.row-1 {height: 8.33%;}
 .row-2 {height: 16.66%;}
 .row-3 {height: 25%;}
 .row-4 {height: 33.33%;}
@@ -43,10 +42,11 @@ html {
 .row-9 {height: 75%;}
 .row-10 {height: 83.33%;}
 .row-11 {height: 91.66%;}
-.row-12 {height: 100%;} */
+.row-12 {height: 100%;}
 
 .flex-container {
     display: flex;
+    flex-wrap: wrap;
     height: 100%;
     width: 100%;
 }
@@ -59,11 +59,15 @@ html {
     color: #ffffff;
     padding: 10px;
     position: fixed;
+	/* editED, AS YOUR HEADER POSITION IS FIXED, HIGHT HAS TO BE DEFINED  */
+	height:120px;
+	z-index:100;
 }
 
 #logo {
     width: 100%;
     padding: 1px;
+	height:80px;
 }
 
 .button {
@@ -89,6 +93,8 @@ html {
     list-style-type: none;
     margin: 0;
     padding: 0;
+	/*editED, FOR THE NEEDED SPACE */
+	margin-right:16px;
 }
   
 .menu li {
@@ -99,6 +105,10 @@ html {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
   
+  	/* ADDED */
+  .menu-container{
+	  margin-top:128px;
+  }
 .menu li:hover {
     background-color: #78bbdd;
 }
@@ -107,6 +117,8 @@ html {
 
 .main {
   background-color: white;
+  /* ADDED */
+  margin-top:128px;
 }
 
 .container {
@@ -119,7 +131,7 @@ html {
 
 .container {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     padding: 10px;
 }
 
@@ -146,7 +158,7 @@ audio {
     bottom: 0;
     left: 0;
     width: 175px;
-    height: 175px;
+    height: 100px;
     display: none;
 }
 
