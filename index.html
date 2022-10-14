@@ -5,6 +5,8 @@
   <head>
     <title>Capify - The capibara spotify</title>
     <link rel="stylesheet" href="static/style/styles.css"/>
+    <script type="text/javascript" src="static/scripts/jquery-3.6.1.js" defer></script>
+    <script type="text/javascript" src="static/scripts/script.js" defer></script>
   </head>
 
   <body>
@@ -20,8 +22,8 @@
       </div>
     
       <div class="col-10 col-s-12 access">
-        <a class="button">Sign up</a>
-        <a class="button">Log in</a>
+        <a class="button" onclick="document.getElementById('demo').innerHTML = noot()">Sign up</a>
+        <a class="button" onclick="$('#demo').hide()">Log in</a>
       </div>
     </div>
     
@@ -51,6 +53,7 @@
         <!-- images -->
 
         <!--Container 1-->
+        <p id="demo"></p>
         <h2>Top albums</h2>
 
         

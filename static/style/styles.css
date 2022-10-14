@@ -58,6 +58,10 @@ html {
     text-decoration: none;
     font-size: 16px;
   }
+
+  .button:hover {
+    cursor: pointer;
+  }
   
 
   div.fixed {
