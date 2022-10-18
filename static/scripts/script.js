@@ -3,6 +3,24 @@ function noot() {
     return "noot noot"
 }
 
+/* --- FORMS --- */
+// Get the modal
+var login_modal = document.getElementById('popup_login');
+var signup_modal = document.getElementById('popup_signup');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == login_modal) {
+    modal.style.display = "none";
+  }
+}
+window.onclick = function(event) {
+  if (event.target == signup_modal) {
+    modal.style.display = "none";
+  }
+}
+
+
 
 /* --- COOKIES --- */
 
