@@ -57,7 +57,12 @@ function test() {
 
 function signUp() {
   setCookie("email", $('#signup_email')[0].value, 2);
-  // setCookie("psw", form.psw.value);
+  setCookie("psw",  $('#psw_email')[0].value, 2);
+  setCookie("username",  $('#signup_username')[0].value, 2);
+  setCookie("name/surname",  $('#signup_name/surname')[0].value, 2);
+  setCookie("date_of_birth",  $('#signup_date_of_birth')[0].value, 2);
+
+
   return true;
 }
 
