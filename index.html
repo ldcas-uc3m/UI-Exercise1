@@ -5,6 +5,8 @@
   <head>
     <title>Capify - The capibara spotify</title>
     <link rel="stylesheet" href="static/style/styles.css"/>
+    <script type="text/javascript" src="static/scripts/jquery-3.6.1.js" defer></script>
+    <script type="text/javascript" src="static/scripts/script.js" defer></script>
   </head>
 
   <body>
@@ -24,13 +26,13 @@
         <a class="button" onclick="document.getElementById('popup_signup').style.display='block'" style="width:auto;">Sign up</a>
         <div id="popup_signup" class="modal">
           <span onclick="document.getElementById('popup_signup').style.display='none'" class="close" title="Close Modal">&times;</span>
-          <form class="modal-content" action="/action_page.php">
+          <form class="modal-content")">
             <div class="popup_container">
               <h1>Sign Up</h1>
               <p>Please fill in this form to create an account.</p>
               <hr>
               <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
+              <input id="signup_email" type="text" placeholder="Enter Email" name="email" required>
         
               <label for="psw"><b>Password</b></label>
               <input type="password" placeholder="Enter Password" name="psw" required>
@@ -38,15 +40,12 @@
               <label for="psw-repeat"><b>Repeat Password</b></label>
               <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
               
-              <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-              </label>
-        
+      
               <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
         
               <div class="clearfix">
                 <button type="button" onclick="document.getElementById('popup_signup').style.display='none'" class="cancelbtn">Cancel</button>
-                <button type="submit" class="signupbtn">Sign Up</button>
+                <button type="submit" onclick="signUp()" class="signupbtn">Sign Up</button>
               </div>
             </div>
           </form>

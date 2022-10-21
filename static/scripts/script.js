@@ -47,6 +47,20 @@ function getCookie(cname) {
   return "";
 }
 
+function test() {
+  setCookie("test", "test", 1);
+  console.log("noot");
+
+  return;
+}
+
+
+function signUp() {
+  setCookie("email", $('#signup_email')[0].value, 2);
+  // setCookie("psw", form.psw.value);
+  return true;
+}
+
 // function checkCookie() {
 //     let user = getCookie("username");
 //     if (user != "") {
