@@ -37,8 +37,8 @@
               <input id ="psw_email" type="password" placeholder="Enter Password" name="psw" required>
 
               <h1 style="color:#591728">Personal information</h1>
-              <label for="name/surname"><b>Name and Surname</b></label>
-              <input id="signup_name/surname" type="text" placeholder="Enter Name and surname" name="name/surname" required>
+              <label for="name_surname"><b>Name and Surname</b></label>
+              <input id="signup_name_surname" type="text" placeholder="Enter Name and surname" name="name_surname" required>
 
               <label for="email"><b>Email</b></label>
               <input id="signup_email" type="text" placeholder="Enter Email" name="email" required>
@@ -52,6 +52,9 @@
                 <button type="button" onclick="document.getElementById('popup_signup').style.display='none'" class="cancelbtn">Cancel</button>
                 <button type="submit" onclick="signUp()" class="signupbtn">Sign Up</button>
               </div>
+
+              <button type="submit" style='background-color: #bf4d27;' class="signupbtn">GOOGLE</button>
+              <button type="submit" style='background-color: #6a489c;' class="signupbtn">FACEBOOK</button>
             </div>
           </form>
         </div>
@@ -65,18 +68,24 @@
             </div>
         
             <div class="popup_container">
+              <h1 style="color:#591728">Enter your username</h1>
               <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
+              <input type="text" placeholder="Enter Username" name="uname" required >
         
+              <h1 style="color:#591728">Enter your password</h1>
               <label for="psw"><b>Password</b></label>
               <input type="password" placeholder="Enter Password" name="psw" required>
                 
-              <button type="submit">Login</button>
+              <button type="submit" onclick="checkCookie()">Login</button>
             </div>
         
-            <div class="popup_container" style="background-color:#f1f1f1">
+            <div class="popup_container" style="background-color: #f1f1f1">
               <button type="login_button" onclick="document.getElementById('popup_login').style.display='none'" class="cancelbtn">Cancel</button>
+
+              <button type="submit" style='background-color: #bf4d27;' class="signupbtn">GOOGLE</button>
+              <button type="submit" style='background-color: #6a489c;' class="signupbtn">FACEBOOK</button>
             </div>
+
           </form>
         </div>
       </div>
@@ -115,7 +124,7 @@
           <div class="relative item">
             <img class="cover" src="static/images/albums/C.W.A - Straight outta Brazil.png">
             <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
+              <source src="static/audio/N.W.A. - Straight Outta Compton.mp3" type="audio/mp3">
             </audio>
             <p>C.W.A - Straight outta Brazil</p>
           </div>
@@ -133,7 +142,7 @@
           <div class="relative item">
             <img class="cover" src="static/images/albums/Streets Ahead - Kind of Green.png">
             <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
+              <source src="static/audio/Blue In Green.mp3" type="audio/mp3">
             </audio>
             <p>Streets Ahead - Kind of Green</p>
           </div>
@@ -141,7 +150,7 @@
           <div class="relative item">
             <img class="cover" src="static/images/albums/Sultans of Swim - Brothers in Paws.png">
             <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
+              <source src="static/audio/Dire Straits.mp3" type="audio/mp3">
             </audio>
             <p>Sultans of Swim - Brothers in Paws</p>
           </div>
@@ -149,7 +158,7 @@
           <div class="relative item">
             <img class="cover" src="static/images/albums/The Weasels - Abbey Reservoir.png">
             <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
+              <source src="static/audio/Come Together.mp3" type="audio/mp3">
             </audio>
             <p>The Weasels - Abbey Reservoir</p>
           </div>
@@ -161,11 +170,11 @@
         <h2>Top artists</h2>
         <div class="container">
           <div class="relative item">
-            <img class="cover" src="static/images/artists/DJ Captain.png">
-            <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
-            </audio>
-            <p>DJ Captain</p>
+              <img class="cover" src="static/images/artists/DJ Captain.png">
+              <audio controls>
+                <source src="static/audio/pipo.mp3" type="audio/mp3">
+              </audio>
+            <a href="artist.html">DJ Captain</a>
           </div>
           
           <div class="relative item">
@@ -173,7 +182,8 @@
             <audio controls>
               <source src="static/audio/pipo.mp3" type="audio/mp3">
             </audio>
-            <p>Leivo</p>
+            <a href="artist.html">Leivo</a>
+
           </div>
           
           <div class="relative item">
@@ -181,7 +191,8 @@
             <audio controls>
               <source src="static/audio/pipo.mp3" type="audio/mp3">
             </audio>
-            <p>Good Bunny</p>
+            <a href="artist.html">Good Bunny</a>
+
           </div>
           
           <div class="relative item">
@@ -189,7 +200,8 @@
             <audio controls>
               <source src="static/audio/pipo.mp3" type="audio/mp3">
             </audio>
-            <p>lil poop</p>
+            <a href="artist.html">lil poop</a>
+
           </div>
           
           <div class="relative item">
@@ -197,7 +209,8 @@
             <audio controls>
               <source src="static/audio/pipo.mp3" type="audio/mp3">
             </audio>
-            <p>Red Rodents</p>
+            <a href="artist.html">Red Rodents</a>
+
           </div>
         </div>
 
@@ -236,7 +249,7 @@
     
   </body>
 
-  <footer>
+  <footer id="msg">
     <h2>Join now!</h2>
   </footer>
 

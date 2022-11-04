@@ -59,24 +59,36 @@ function signUp() {
   setCookie("email", $('#signup_email')[0].value, 2);
   setCookie("psw",  $('#psw_email')[0].value, 2);
   setCookie("username",  $('#signup_username')[0].value, 2);
-  setCookie("name/surname",  $('#signup_name/surname')[0].value, 2);
+  setCookie("name_surname",  $('#signup_name_surname')[0].value, 2);
   setCookie("date_of_birth",  $('#signup_date_of_birth')[0].value, 2);
 
+  document.getElementById('msg').style.display='none';
 
   return true;
 }
 
-// function checkCookie() {
-//     let user = getCookie("username");
-//     if (user != "") {
-//         alert("Welcome again " + user);
-//     } else {
-//         user = prompt("Please enter your name:","");
-//         if (user != "" && user != null) {
-//             setCookie("username", user, 30);
-//         }
-//     }
-// }
+function logIn(cookie) {
+  exists = getCookie(cookie)
+  if (exists == cookie) {
+    return true;
+  }
+  else {
+
+  }
+}
+
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+      alert("Welcome again " + user);
+  } else {
+      user = prompt("Please enter your name:","");
+      if (user != "" && user != null) {
+          setCookie("username", user, 30);
+      }
+  }
+}
 
 function main() {
     setCookie("username", "pipo", 1)
