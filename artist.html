@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Capify - The capibara spotify</title>
+    <link rel="stylesheet" href="static/style/styles.css"/>
+    <script type="text/javascript" src="static/scripts/jquery-3.6.1.js" defer></script>
+    <script type="text/javascript" src="static/scripts/script.js" defer></script>
+  </head>
+
+  <body>
+    
+    <!-- Header -->
+
+    <div class="row header">
+      <div class="col-1 col-s-3">
+        <img id="logo" src="static/images/icons/logo.svg">
+      </div>
+      <div class="col-1 col-s-3">
+        <h1>Capify</h1>
+      </div>
+    
+      <div class="col-10 col-s-12 access">
+        <!-- sign up -->
+        <a class="button" onclick="document.getElementById('popup_signup').style.display='block'" style="width:auto;">Sign up</a>
+        <div id="popup_signup" class="modal">
+          <span onclick="document.getElementById('popup_signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <form class="modal-content")">
+            <div class="popup_container">
+              <h1 style="color:#591728">Account information</h1>
+              <hr>
+              <label for="username"><b>Username</b></label>
+              <input id="signup_username" type="text" placeholder="Enter Username" name="username" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input id ="psw_email" type="password" placeholder="Enter Password" name="psw" required>
+
+              <h1 style="color:#591728">Personal information</h1>
+              <label for="name/surname"><b>Name and Surname</b></label>
+              <input id="signup_name/surname" type="text" placeholder="Enter Name and surname" name="name/surname" required>
+
+              <label for="email"><b>Email</b></label>
+              <input id="signup_email" type="text" placeholder="Enter Email" name="email" required>
+
+              <label for="date_of_birth"><b>Date of Birth</b></label>
+              <input id="signup_date_of_birth" type="text" placeholder="Enter your date of birth" name="date_of_birth" required>
+        
+              <p style="color:#591728">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        
+              <div class="clearfix">
+                <button type="button" onclick="document.getElementById('popup_signup').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="submit" onclick="signUp()" class="signupbtn">Sign Up</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- login -->
+        <a class="button" onclick="document.getElementById('popup_login').style.display='block'" style="width:auto;">Log in</a>
+        <div id="popup_login" class="modal">
+          <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('popup_login').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+        
+            <div class="popup_container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+        
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+                
+              <button type="submit">Login</button>
+            </div>
+        
+            <div class="popup_container" style="background-color:#f1f1f1">
+              <button type="login_button" onclick="document.getElementById('popup_login').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div id="menuBar" class="row center">
+
+      <!-- Navigation Bar -->
+
+      <div class="col-3 col-s-3 menu">
+        <ul>
+          <li>Home</li>
+          <li>Search</li>
+          <li>About us</li>
+          <li>Liked songs</li>
+        </ul>
+      </div>
+      <div class="menu bottom col-3 col-s-3">
+        <ul>
+          <li>FAQ</li>
+          <li>Cookies policy</li>
+          <li>Privacy policy</li>
+        </ul>
+      </div>
+    
+      <!-- Main -->
+      <div class="col-9 col-s-9 main">
+
+        <h2>Red Rodents</h2>
+        <img class="cover" src="static/images/artists/Red Rodents.png">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+        <!-- songs -->
+        </br>
+        <h3>Top songs</h3>
+        <div class="song">
+          <img class="icon" src="static/images/icons/play.png">
+          <img src="static/images/albums/The Weasels - Abbey Reservoir.png">
+          <p>Hello</p>
+        </div>  
+
+
+      </div>
+    
+    </div>
+    
+  </body>
+
+  <footer>
+    <h2>Join now!</h2>
+  </footer>
+
+</html>
