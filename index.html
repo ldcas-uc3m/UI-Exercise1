@@ -5,51 +5,115 @@
   <head>
     <title>Capify - The capibara spotify</title>
     <link rel="stylesheet" href="static/style/styles.css"/>
+    <script type="text/javascript" src="static/scripts/jquery-3.6.1.js" defer></script>
+    <script type="text/javascript" src="static/scripts/script.js" defer></script>
   </head>
 
   <body>
-    <div class="flex-container">
+    
+    <!-- Header -->
 
-      <!-- HEADER -->
-      <div class=" col-12 header">
-          <div class="col-2">
-            <img id="logo" src="static/images/icons/logo.svg">
-          </div>
-          <div class="col-1">
-            <h1>Capify</h1>
-          </div>
+    <div class="row header">
+      <div class="col-1 col-s-3">
+        <img id="logo" src="static/images/icons/logo.svg">
+      </div>
+      <div class="col-1 col-s-3">
+        <h1>Capify</h1>
+      </div>
+    
+      <div class="col-10 col-s-12 access">
+        <!-- sign up -->
+        <a class="button" onclick="document.getElementById('popup_signup').style.display='block'" style="width:auto;">Sign up</a>
+        <div id="popup_signup" class="modal">
+          <span onclick="document.getElementById('popup_signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <form class="modal-content")">
+            <div class="popup_container">
+              <h1 style="color:#591728">Account information</h1>
+              <hr>
+              <label for="username"><b>Username</b></label>
+              <input id="signup_username" type="text" placeholder="Enter Username" name="username" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input id ="psw_email" type="password" placeholder="Enter Password" name="psw" required>
+
+              <h1 style="color:#591728">Personal information</h1>
+              <label for="name_surname"><b>Name and Surname</b></label>
+              <input id="signup_name_surname" type="text" placeholder="Enter Name and surname" name="name_surname" required>
+
+              <label for="email"><b>Email</b></label>
+              <input id="signup_email" type="text" placeholder="Enter Email" name="email" required>
+
+              <label for="date_of_birth"><b>Date of Birth</b></label>
+              <input id="signup_date_of_birth" type="text" placeholder="Enter your date of birth" name="date_of_birth" required>
         
-          <div class="col-1 button">
-            <a>Sign up</a>
-          </div>
+              <p style="color:#591728">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        
+              <div class="clearfix">
+                <button type="button" onclick="document.getElementById('popup_signup').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="submit" onclick="signUp()" class="signupbtn">Sign Up</button>
+              </div>
 
-          <div class="col-1 button">
-            <a>Log in</a>
-          </div>
-      </div>
-
-      <!-- MENU -->
-      <div class=" col-3 menu-container">
-        <div class="col-6 menu">
-          <ul>
-            <li>Home</li>
-            <li>Search</li>
-            <li>About us</li>
-            <li>Liked songs</li>
-          </ul>
+              <button type="submit" style='background-color: #bf4d27;' class="signupbtn">GOOGLE</button>
+              <button type="submit" style='background-color: #6a489c;' class="signupbtn">FACEBOOK</button>
+            </div>
+          </form>
         </div>
-        <div class="col-6 menu bottom">
-          <ul>
-            <li>FAQ</li>
-            <li>Cookies policy</li>
-            <li>Privacy policy</li>
-          </ul>
+
+        <!-- login -->
+        <a class="button" onclick="document.getElementById('popup_login').style.display='block'" style="width:auto;">Log in</a>
+        <div id="popup_login" class="modal">
+          <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('popup_login').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+        
+            <div class="popup_container">
+              <h1 style="color:#591728">Enter your username</h1>
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required >
+        
+              <h1 style="color:#591728">Enter your password</h1>
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+                
+              <button type="submit" onclick="checkCookie()">Login</button>
+            </div>
+        
+            <div class="popup_container" style="background-color: #f1f1f1">
+              <button type="login_button" onclick="document.getElementById('popup_login').style.display='none'" class="cancelbtn">Cancel</button>
+
+              <button type="submit" style='background-color: #bf4d27;' class="signupbtn">GOOGLE</button>
+              <button type="submit" style='background-color: #6a489c;' class="signupbtn">FACEBOOK</button>
+            </div>
+
+          </form>
         </div>
       </div>
+    </div>
+    
+    <div id="menuBar" class="row center">
 
-      <!-- MAIN -->
+      <!-- Navigation Bar -->
 
-      <div class="col-9 main">
+      <div class="col-3 col-s-3 menu">
+        <ul>
+          <li>Home</li>
+          <li>Search</li>
+          <li>About us</li>
+          <li>Liked songs</li>
+        </ul>
+      </div>
+      <div class="menu bottom col-3 col-s-3">
+        <ul>
+          <li>FAQ</li>
+          <li>Cookies policy</li>
+          <li>Privacy policy</li>
+        </ul>
+      </div>
+    
+      <!-- Main -->
+      <div class="col-9 col-s-9 main">
+
         <!-- images -->
 
         <!--Container 1-->
@@ -60,7 +124,7 @@
           <div class="relative item">
             <img class="cover" src="static/images/albums/C.W.A - Straight outta Brazil.png">
             <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
+              <source src="static/audio/N.W.A. - Straight Outta Compton.mp3" type="audio/mp3">
             </audio>
             <p>C.W.A - Straight outta Brazil</p>
           </div>
@@ -78,7 +142,7 @@
           <div class="relative item">
             <img class="cover" src="static/images/albums/Streets Ahead - Kind of Green.png">
             <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
+              <source src="static/audio/Blue In Green.mp3" type="audio/mp3">
             </audio>
             <p>Streets Ahead - Kind of Green</p>
           </div>
@@ -86,7 +150,7 @@
           <div class="relative item">
             <img class="cover" src="static/images/albums/Sultans of Swim - Brothers in Paws.png">
             <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
+              <source src="static/audio/Dire Straits.mp3" type="audio/mp3">
             </audio>
             <p>Sultans of Swim - Brothers in Paws</p>
           </div>
@@ -94,7 +158,7 @@
           <div class="relative item">
             <img class="cover" src="static/images/albums/The Weasels - Abbey Reservoir.png">
             <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
+              <source src="static/audio/Come Together.mp3" type="audio/mp3">
             </audio>
             <p>The Weasels - Abbey Reservoir</p>
           </div>
@@ -106,11 +170,11 @@
         <h2>Top artists</h2>
         <div class="container">
           <div class="relative item">
-            <img class="cover" src="static/images/artists/DJ Captain.png">
-            <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
-            </audio>
-            <p>DJ Captain</p>
+              <img class="cover" src="static/images/artists/DJ Captain.png">
+              <audio controls>
+                <source src="static/audio/pipo.mp3" type="audio/mp3">
+              </audio>
+            <a href="artist.html">DJ Captain</a>
           </div>
           
           <div class="relative item">
@@ -118,7 +182,8 @@
             <audio controls>
               <source src="static/audio/pipo.mp3" type="audio/mp3">
             </audio>
-            <p>Leivo</p>
+            <a href="artist.html">Leivo</a>
+
           </div>
           
           <div class="relative item">
@@ -126,7 +191,8 @@
             <audio controls>
               <source src="static/audio/pipo.mp3" type="audio/mp3">
             </audio>
-            <p>Good Bunny</p>
+            <a href="artist.html">Good Bunny</a>
+
           </div>
           
           <div class="relative item">
@@ -134,7 +200,8 @@
             <audio controls>
               <source src="static/audio/pipo.mp3" type="audio/mp3">
             </audio>
-            <p>lil poop</p>
+            <a href="artist.html">lil poop</a>
+
           </div>
           
           <div class="relative item">
@@ -142,7 +209,8 @@
             <audio controls>
               <source src="static/audio/pipo.mp3" type="audio/mp3">
             </audio>
-            <p>Red Rodents</p>
+            <a href="artist.html">Red Rodents</a>
+
           </div>
         </div>
 
@@ -152,53 +220,37 @@
         <div class="container">
           <div class="relative item">
             <img class="cover" src="static/images/listeners/bruh.png">
-            <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
-            </audio>
             <p>bruh</p>
           </div>
           
           <div class="relative item">
             <img class="cover" src="static/images/listeners/doge.png">
-            <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
-            </audio>
-            <p>doge</p>
           </div>
           
           <div class="relative item">
             <img class="cover" src="static/images/listeners/monke bros.png">
-            <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
-            </audio>
             <p>monke bros</p>
           </div>
           
           <div class="relative item">
             <img class="cover" src="static/images/listeners/pingu.png">
-            <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
-            </audio>
             <p>pingu</p>
           </div>
           
           <div class="relative item">
             <img class="cover" src="static/images/listeners/Xolotl.png">
-            <audio controls>
-              <source src="static/audio/pipo.mp3" type="audio/mp3">
-            </audio>
             <p>Xolotl</p>
           </div>
         </div>
 
       </div>
-
+    
     </div>
-    </br></br></br></br></br></br>
+    
   </body>
 
-  <footer>
-    <h2>Join Now!</h2>
+  <footer id="msg">
+    <h2>Join now!</h2>
   </footer>
 
 </html>
